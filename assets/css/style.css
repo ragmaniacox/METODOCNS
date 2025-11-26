@@ -1,0 +1,80 @@
+
+/* Premium CSS for Metodo CNS landing */
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --accent:#2b6cff;
+  --accent-2:#6b46ff;
+  --muted:#6b7280;
+  --radius:14px;
+  --maxw:1100px;
+  --glass: rgba(255,255,255,0.6);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,#f7f9fc 0%, var(--bg) 100%);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-text-size-adjust:100%;
+  line-height:1.5;
+}
+
+/* container */
+.container{max-width:var(--maxw);margin:0 auto;padding:28px;}
+.hero{
+  display:grid;
+  grid-template-columns:1fr 460px;
+  gap:32px;
+  align-items:center;
+  padding:48px 28px;
+}
+.hero-card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.9));
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:0 10px 30px rgba(15,23,42,0.06);
+  border:1px solid rgba(15,23,42,0.04);
+}
+.kicker{color:var(--accent);font-weight:700;letter-spacing:0.6px;margin-bottom:10px}
+.h1{font-size:34px;margin:0 0 12px 0;line-height:1.05}
+.lead{color:var(--muted);font-size:16px;margin-bottom:18px}
+.price-badge{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:10px 16px;border-radius:10px;font-weight:700;margin-top:8px}
+
+.cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 20px;border-radius:12px;font-weight:700;border:none;cursor:pointer;text-decoration:none;box-shadow:0 8px 20px rgba(43,108,255,0.18)}
+.secondary-cta{background:transparent;border:2px solid rgba(15,23,42,0.06);padding:12px 18px;border-radius:10px;margin-left:12px;cursor:pointer}
+
+/* features */
+.features{display:flex;gap:14px;margin-top:20px;flex-wrap:wrap}
+.feature{background:var(--card);padding:12px 14px;border-radius:12px;box-shadow:0 6px 18px rgba(12,18,36,0.04);flex:1;min-width:180px}
+
+/* Section */
+.section{padding:48px 28px}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+
+/* cards */
+.card{background:var(--card);border-radius:12px;padding:22px;box-shadow:0 10px 30px rgba(2,6,23,0.04);border:1px solid rgba(2,6,23,0.02)}
+
+/* bonuses */
+.bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.bonus{background:linear-gradient(180deg,#fff,#fbfbff);padding:18px;border-radius:12px;border:1px solid rgba(43,108,255,0.06);box-shadow:0 8px 24px rgba(43,108,255,0.06)}
+
+/* testimonials */
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.testimonial{background:linear-gradient(180deg,#fff,#fff);padding:18px;border-radius:12px;border:1px solid rgba(0,0,0,0.04)}
+
+/* responsive */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr; padding:28px 16px}
+  .bonus-grid,.testimonials{grid-template-columns:1fr}
+  .columns{grid-template-columns:1fr}
+  .hero-card{order:2}
+}
+
+/* footer */
+footer{padding:28px;background:transparent;border-top:1px solid rgba(15,23,42,0.04);text-align:center;color:var(--muted);font-size:14px}
+small{color:var(--muted)}
